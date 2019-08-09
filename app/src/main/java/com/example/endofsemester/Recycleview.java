@@ -32,7 +32,7 @@ import android.widget.TextView;
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ViewHoledr viewHoledr, int i) {
+        public void onBindViewHolder(@NonNull ViewHoledr viewHoledr, final int i) {
            viewHoledr.price.setText(""+SearchByfilters.resaultUlaml.get(i).getPrice());
             viewHoledr.muzmanim.setText(""+SearchByfilters.resaultUlaml.get(i).getMuzmanim());
             viewHoledr.type.setText(""+SearchByfilters.resaultUlaml.get(i).getType());
@@ -40,7 +40,9 @@ import android.widget.TextView;
             viewHoledr.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    context.startActivity(new Intent(context,UlamDetails.class));
+                    Intent intent=new Intent(context,UlamDetails.class);
+                    intent.putExtra("index",i);
+                    context.startActivity(intent);
                 }
             });
          //   viewHoledr.city.setText(SearchByfilters.ulamArrayList.get(i).getCity());

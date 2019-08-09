@@ -3,7 +3,7 @@ package com.example.endofsemester;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ulam {
+public class Ulam {
  private int price;
  private int muzmanim;
  private String city;
@@ -12,7 +12,7 @@ public class ulam {
 
 
 
-    public ulam(int price, int muzmanim, String city, int image,int type) {
+    public Ulam(int price, int muzmanim, String city, int image, int type) {
         this.price = price;
         this.muzmanim = muzmanim;
         this.city = city;
