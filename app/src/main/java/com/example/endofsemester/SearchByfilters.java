@@ -64,6 +64,8 @@ public class SearchByfilters extends AppCompatActivity {
         ulamArrayList.add(new Ulam(500, 30, "אשקלון", R.drawable.venetsia));
         ulamArrayList.add(new Ulam(500, 30, "ירושלים", R.drawable.adia));
         ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.oforia));
+        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.gany_aysvi));
+        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.venetsia));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,3));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,4));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,4));
