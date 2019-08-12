@@ -15,7 +15,7 @@ public class UlamDetails extends AppCompatActivity {
     private TextView muzmanim;
     private TextView city;
     private ImageView image;
-
+private ImageView imageView;
     private Ulam ulam;
 
 
