@@ -27,7 +27,7 @@ public class SearchByfilters extends AppCompatActivity {
     private SeekBar seekBarInvited;
     private TextView sumInvited;
     private Spinner spinnerCitys;
-    RadioGroup radioGroup;
+
 
 
     @Override
@@ -37,7 +37,7 @@ public class SearchByfilters extends AppCompatActivity {
         addNewUlam();
         seekBarInvited = findViewById(R.id.seekBar_invited);
         seekBarRange = findViewById(R.id.seekBar_range);
-        radioGroup = findViewById(R.id.radioGroup);
+
         sumRange = findViewById(R.id.sum_range);
         sumInvited = findViewById(R.id.sum_invited);
         Button button = findViewById(R.id.check_the_data);
@@ -56,14 +56,14 @@ public class SearchByfilters extends AppCompatActivity {
 
     private void addNewUlam() {
         ulamArrayList=new ArrayList<>();
-        ulamArrayList.add(new Ulam(20, 200, "חולון", R.drawable.aahuza, 0));
-        ulamArrayList.add(new Ulam(500, 350, "קריית גת", R.drawable.aatsula, 2));
-        ulamArrayList.add(new Ulam(300, 300, "יבנה", R.drawable.dereh_ayaar, 3));
-        ulamArrayList.add(new Ulam(500, 290, "אילת", R.drawable.emilia, 1));
-        ulamArrayList.add(new Ulam(270, 600, "גן יבנה", R.drawable.gany_aysvi, 1));
-        ulamArrayList.add(new Ulam(500, 34, "אשקלון", R.drawable.venetsia, 1));
-        ulamArrayList.add(new Ulam(500, 34, "vfgh", R.drawable.adia, 0));
-        ulamArrayList.add(new Ulam(500, 34, "vfgh", R.drawable.oforia, 0));
+        ulamArrayList.add(new Ulam(20, 200, "חולון", R.drawable.aahuza));
+        ulamArrayList.add(new Ulam(500, 350, "קריית גת", R.drawable.aatsula));
+        ulamArrayList.add(new Ulam(300, 300, "יבנה", R.drawable.dereh_ayaar));
+        ulamArrayList.add(new Ulam(500, 290, "אילת", R.drawable.emilia));
+        ulamArrayList.add(new Ulam(270, 600, "גן יבנה", R.drawable.gany_aysvi));
+        ulamArrayList.add(new Ulam(500, 30, "אשקלון", R.drawable.venetsia));
+        ulamArrayList.add(new Ulam(500, 30, "ירושלים", R.drawable.adia));
+        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.oforia));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,3));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,4));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,4));
@@ -86,7 +86,9 @@ public class SearchByfilters extends AppCompatActivity {
         for (Ulam object : ulamArrayList) {
 
             if (
-                  true
+                    object.getPrice() <= seekBarRange.getProgress()
+                            && object.getMuzmanim() <= seekBarInvited.getProgress()
+                            && spinnerCitys.getSelectedItem().toString().contains(object.getCity())
             ) {
                 resaultUlaml.add(object);
             }
@@ -108,9 +110,9 @@ public class SearchByfilters extends AppCompatActivity {
         seekBarRange.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-                sumRange.setText("" + progress);
-
+                progress = progress / 10;
+                progress = progress * 10;
+                sumRange.setText(String.valueOf(progress));
             }
 
             @Override
@@ -129,8 +131,10 @@ public class SearchByfilters extends AppCompatActivity {
         seekBarInvited.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                sumInvited.setText("" + progress);
 
+                progress = progress / 10;
+                progress = progress * 10;
+                sumInvited.setText(String.valueOf(progress));
             }
 
             @Override

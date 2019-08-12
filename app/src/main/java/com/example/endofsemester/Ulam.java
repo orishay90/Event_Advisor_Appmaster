@@ -8,16 +8,16 @@ public class Ulam {
  private int muzmanim;
  private String city;
  private  int image;
- private int type;
 
 
 
-    public Ulam(int price, int muzmanim, String city, int image, int type) {
+
+    public Ulam(int price, int muzmanim, String city, int image) {
         this.price = price;
         this.muzmanim = muzmanim;
         this.city = city;
         this.image = image;
-        this.type=type;
+
 
     }
 
@@ -53,11 +53,7 @@ public class Ulam {
         this.image = image;
     }
 
-    public int getType() {
-        return type;
-    }
 
-    public void setType(int type) {
-        this.type = type;
-    }
+
+
 }

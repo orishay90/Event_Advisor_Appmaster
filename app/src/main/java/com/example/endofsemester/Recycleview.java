@@ -35,7 +35,6 @@ import android.widget.TextView;
         public void onBindViewHolder(@NonNull ViewHoledr viewHoledr, final int i) {
            viewHoledr.price.setText(""+SearchByfilters.resaultUlaml.get(i).getPrice());
             viewHoledr.muzmanim.setText(""+SearchByfilters.resaultUlaml.get(i).getMuzmanim());
-            viewHoledr.type.setText(""+SearchByfilters.resaultUlaml.get(i).getType());
             viewHoledr.image.setImageResource(SearchByfilters.resaultUlaml.get(i).getImage());
             viewHoledr.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -71,7 +70,7 @@ import android.widget.TextView;
                 price=itemView.findViewById(R.id.textView_price);
                 muzmanim=itemView.findViewById(R.id.textView_muzmanim);
                type=itemView.findViewById(R.id.textView_type);
-                image=itemView.findViewById(R.id.image);
+                image=itemView.findViewById(R.id.image_logo);
                 cardView=itemView.findViewById(R.id.cardView);
                // city=itemView.findViewById(R.id.textView16);
                // city=itemView.findViewById(R.id.image);

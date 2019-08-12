@@ -41,7 +41,6 @@
         </activity>
         <activity android:name=".MainPage" />
         <activity android:name=".SearchByfilters" />
-        <activity android:name=".SearchByGps" />
     </application>
 
 </manifest>

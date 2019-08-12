@@ -13,7 +13,7 @@ public class UlamDetails extends AppCompatActivity {
     private TextView muzmanim;
     private String city;
     private  int image;
-    private int type;
+
     private Ulam ulam;
 
 
@@ -25,10 +25,12 @@ public class UlamDetails extends AppCompatActivity {
         ulam=SearchByfilters.resaultUlaml.get(index);
 
         price=findViewById(R.id.textView_price);
-        price.setText(""+ulam.getPrice());
+        price.setText("מחיר :"+ulam.getPrice());
 
         muzmanim=findViewById(R.id.textView_muzmanim);
-        muzmanim.setText(""+ulam.getMuzmanim());
+        muzmanim.setText("מוזמנים :"+ulam.getMuzmanim());
+
+
     }
 
 
