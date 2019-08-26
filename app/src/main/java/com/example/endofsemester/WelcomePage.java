@@ -69,7 +69,7 @@ public class WelcomePage extends AppCompatActivity {
 
     }
 
-public void n(){};
+
 
 
     public void nextPage() {
