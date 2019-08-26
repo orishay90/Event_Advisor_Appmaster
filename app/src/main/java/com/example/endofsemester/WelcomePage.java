@@ -27,6 +27,7 @@ public class WelcomePage extends AppCompatActivity {
         nextPage();
         startThreadTmonot();
         addArrayListImages();
+
     }
 
 
@@ -68,7 +69,7 @@ public class WelcomePage extends AppCompatActivity {
 
     }
 
-
+public void n(){};
 
 
     public void nextPage() {
