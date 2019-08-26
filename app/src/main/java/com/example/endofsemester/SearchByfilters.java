@@ -95,7 +95,7 @@ public class SearchByfilters extends AppCompatActivity {
                 resaultUlaml.add(object);
             }
         }
-        startActivity(new Intent(this, R_V.class));
+        startActivity(new Intent(this, MainActivity_checking.class));
     }
 
 

@@ -92,6 +92,8 @@ public class WelcomePage extends AppCompatActivity {
                 try {
                     Thread.sleep(3500);
                     startActivity(nextPage);
+                    finish();
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
