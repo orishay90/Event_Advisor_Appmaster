@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -35,6 +36,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        supportMapFragment.getMapAsync(this);
     }
 
 
@@ -52,7 +56,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        mMap = googleMap;
+        this.mMap = googleMap;
+
+
         try {
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
@@ -68,9 +74,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Log.e("MapActivity", "Can't find style. Error: ", e);
         }
         // Add a marker in Sydney and move the camera
-        LatLng israel = new LatLng(31.046051, 34.851612);
+        LatLng israel = new LatLng(31.6095813,34.811959);
         mMap.addMarker(new MarkerOptions().position(israel).title("Marker in Israel").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.marker_new)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(israel));
+
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(israel,11f));
+
+
     }
 
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
@@ -81,5 +90,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         vectorDrawable.draw(canvas);
         return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
+
 
 }
