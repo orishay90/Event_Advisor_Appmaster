@@ -3,6 +3,9 @@ package com.example.endofsemester;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import static com.example.endofsemester.SearchByfilters.resaultUlaml;
 
 public class MainActivity_checking extends AppCompatActivity {
     private Intent nextPage;

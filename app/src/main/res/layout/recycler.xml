@@ -45,13 +45,6 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/textView_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

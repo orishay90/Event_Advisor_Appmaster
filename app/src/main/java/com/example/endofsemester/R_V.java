@@ -16,8 +16,6 @@ public class R_V extends AppCompatActivity {
 
 
 
-
-
     private void initRecyclerView() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         layoutManager.setSmoothScrollbarEnabled(true);
