@@ -33,7 +33,7 @@
         android:max="1000"
 
         android:progress="0"
-        android:progressTint="#7A4D4D"
+        android:progressTint="@color/cardview_light_background"
         app:layout_constraintBottom_toTopOf="@+id/textView15"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintHorizontal_bias="0.0"
@@ -53,6 +53,7 @@
         android:foregroundTint="@color/cardview_light_background"
         android:max="500"
         android:progress="0"
+        android:progressTint="@color/cardview_light_background"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toStartOf="@+id/guideline17"
         app:layout_constraintHorizontal_bias="1.0"

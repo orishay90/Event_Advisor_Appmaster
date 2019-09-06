@@ -10,6 +10,7 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -93,8 +94,28 @@ public class SearchByfilters extends AppCompatActivity {
                             && spinnerCitys.getSelectedItem().toString().contains(object.getCity())
             ) {
                 resaultUlaml.add(object);
+
             }
+
+          /* else if (resaultUlaml.isEmpty()){
+
+                Toast.makeText(this, "לא נמצאו נתונים ", Toast.LENGTH_LONG).show();
+
+            }
+*/
+
+
+
+    }
+ if (resaultUlaml.isEmpty()){
+
+
+            Toast.makeText(this, "לא נמצאו אולמות מתאימים  :/ ", Toast.LENGTH_LONG).show();
+     startActivity(new Intent(this, R_V.class));
+
         }
+ else
+
         startActivity(new Intent(this, MainActivity_checking.class));
     }
 

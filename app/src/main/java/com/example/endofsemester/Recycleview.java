@@ -10,12 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+
+import static com.example.endofsemester.SearchByfilters.resaultUlaml;
 
 
-
-
-    public class Recycleview extends android.support.v7.widget.RecyclerView.Adapter<Recycleview.ViewHoledr>
+public class Recycleview extends android.support.v7.widget.RecyclerView.Adapter<Recycleview.ViewHoledr>
     {
+
 
         private Context context;
 
@@ -33,9 +37,10 @@ import android.widget.TextView;
 
         @Override
         public void onBindViewHolder(@NonNull ViewHoledr viewHoledr, final int i) {
-           viewHoledr.price.setText(""+SearchByfilters.resaultUlaml.get(i).getPrice());
-            viewHoledr.muzmanim.setText(""+SearchByfilters.resaultUlaml.get(i).getMuzmanim());
-            viewHoledr.image.setImageResource(SearchByfilters.resaultUlaml.get(i).getImage());
+           viewHoledr.price.setText("מחיר :"+ resaultUlaml.get(i).getPrice());
+            viewHoledr.muzmanim.setText("מוזמנים :"+ resaultUlaml.get(i).getMuzmanim());
+            viewHoledr.image.setImageResource(resaultUlaml.get(i).getImage());
+            viewHoledr.city.setText("עיר :"+ resaultUlaml.get(i).getCity());
             viewHoledr.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -49,17 +54,18 @@ import android.widget.TextView;
 
 
 
+
+
         @Override
         public int getItemCount() {
-            return SearchByfilters.resaultUlaml.size();
+            return resaultUlaml.size();
         }
 
         public  class ViewHoledr extends RecyclerView.ViewHolder {
 
              TextView price;
             TextView muzmanim;
-            TextView type;
-           // public TextView city;
+            TextView city;
               ImageView image;
               CardView cardView;
 
@@ -69,7 +75,7 @@ import android.widget.TextView;
                 super(itemView);
                 price=itemView.findViewById(R.id.textView_price);
                 muzmanim=itemView.findViewById(R.id.textView_muzmanim);
-               type=itemView.findViewById(R.id.textView_type);
+                city=itemView.findViewById(R.id.textView_city);
                 image=itemView.findViewById(R.id.image_logo);
                 cardView=itemView.findViewById(R.id.cardView);
                // city=itemView.findViewById(R.id.textView16);
