@@ -57,16 +57,14 @@ public class SearchByfilters extends AppCompatActivity {
 
     private void addNewUlam() {
         ulamArrayList=new ArrayList<>();
-        ulamArrayList.add(new Ulam(20, 200, "חולון", R.drawable.aahuza));
-        ulamArrayList.add(new Ulam(500, 350, "קריית גת", R.drawable.aatsula));
-        ulamArrayList.add(new Ulam(300, 300, "יבנה", R.drawable.dereh_ayaar));
-        ulamArrayList.add(new Ulam(500, 290, "אילת", R.drawable.emilia));
-        ulamArrayList.add(new Ulam(270, 600, "גן יבנה", R.drawable.gany_aysvi));
-        ulamArrayList.add(new Ulam(500, 30, "אשקלון", R.drawable.venetsia));
-        ulamArrayList.add(new Ulam(500, 30, "ירושלים", R.drawable.adia));
-        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.oforia));
-        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.gany_aysvi));
-        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.venetsia));
+        ulamArrayList.add(new Ulam(20, 200, "תל אביב", R.drawable.aahuza,"http://achuza.co.il"));
+        ulamArrayList.add(new Ulam(500, 350, "תל אביב", R.drawable.aatsula,"http://www.haatzula.co.il"));
+        ulamArrayList.add(new Ulam(300, 300, "תל אביב", R.drawable.dereh_ayaar,"http://www.dhj.co.il"));
+        ulamArrayList.add(new Ulam(500, 290, "תל אביב", R.drawable.emilia,"http://www.emiliaevents.co.il"));
+        ulamArrayList.add(new Ulam(270, 600, "תל אביב", R.drawable.gany_aysvi,"https://ganeyhazvi.co.il"));
+        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.adia,"https://www.adia.co.il"));
+        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.oforia," http://www.euphoria-events.co.il"));
+        ulamArrayList.add(new Ulam(500, 30, "תל אביב", R.drawable.venetsia,"http://www.venicevents.co.il"));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,3));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,4));
 //        ulamArrayList.add(new Ulam(500, 500, "vfgh",R.drawable.n1,4));
@@ -97,7 +95,7 @@ public class SearchByfilters extends AppCompatActivity {
 
             }
 
-          /* else if (resaultUlaml.isEmpty()){
+       /*  else if (resaultUlaml.isEmpty()){
 
                 Toast.makeText(this, "לא נמצאו נתונים ", Toast.LENGTH_LONG).show();
 

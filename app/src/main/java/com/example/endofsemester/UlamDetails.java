@@ -14,9 +14,11 @@ public class UlamDetails extends AppCompatActivity {
     private TextView price;
     private TextView muzmanim;
     private TextView city;
+    private TextView link;
     private ImageView image;
-private ImageView imageView;
+    private ImageView imageView;
     private Ulam ulam;
+
 
 
     @Override
@@ -34,6 +36,9 @@ private ImageView imageView;
 
         city=findViewById(R.id.textView_city);
         city.setText("עיר :"+ulam.getCity());
+
+        link=findViewById(R.id.textViewLink);
+        link.setText("דף הבית :"+ulam.getLink());
 
         image=findViewById(R.id.image_logo);
         image.setImageResource(Integer.parseInt(""+ulam.getImage()));

@@ -1,18 +1,25 @@
 package com.example.endofsemester;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+
+import java.util.ArrayList;
 
 public class MainPage extends AppCompatActivity {
     private ImageView showImageMeniu;
     private ImageButton filters;
     private ImageButton gps;
     private Intent goTonextPage;
+    private ArrayList<Drawable> images;
+    private ImageView pizzaImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +28,8 @@ public class MainPage extends AppCompatActivity {
         setImageButtens();
         klickFiltersBuutten();
         klickGpsBuutten();
+        addArrayListImages();
+        setTheImageThread();
 
 
     }
@@ -60,5 +69,66 @@ public void setImageButtens(){
 
             }
         });
+    }
+
+
+    private void setTheImageThread() {
+        final Animation in  = AnimationUtils.loadAnimation(this, R.anim.anima);
+
+
+        pizzaImage=findViewById(R.id.pizza_image);
+        pizzaImage.setAnimation(in);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true)
+                {
+
+                    for (int i = 0; i <images.size() ; i++) {
+                        try {
+                            try {
+                                Thread.sleep(4000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            final int finalI = i;
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    pizzaImage.setImageDrawable(images.get(finalI));
+
+                                }
+                            });
+                            Thread.sleep(4000);
+
+
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    pizzaImage.startAnimation(in);
+                                }
+                            });
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }
+            }
+        }).start();
+
+
+
+    }
+    private void addArrayListImages() {
+        images=new ArrayList<>();
+        images.add(getDrawable(R.drawable.adia));
+        images.add(getDrawable(R.drawable.aatsula));
+        images.add(getDrawable(R.drawable.oforia));
+        images.add(getDrawable(R.drawable.nnn1));
+        images.add(getDrawable(R.drawable.doria_ulam));
+        images.add(getDrawable(R.drawable.amuzeon));
+
     }
 }

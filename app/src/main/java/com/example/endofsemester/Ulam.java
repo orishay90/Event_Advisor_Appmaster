@@ -8,16 +8,17 @@ public class Ulam {
  private int muzmanim;
  private String city;
  private  int image;
+ private String link;
 
 
 
 
-    public Ulam(int price, int muzmanim, String city, int image) {
+    public Ulam(int price, int muzmanim, String city, int image,String link) {
         this.price = price;
         this.muzmanim = muzmanim;
         this.city = city;
         this.image = image;
-
+        this.link=link;
 
     }
 
@@ -53,7 +54,11 @@ public class Ulam {
         this.image = image;
     }
 
+    public String getLink() {
+        return link;
+    }
 
-
-
+    public void setLink(String link) {
+        this.link = link;
+    }
 }

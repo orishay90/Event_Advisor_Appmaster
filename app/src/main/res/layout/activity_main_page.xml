@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline8" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/pizza_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -94,14 +94,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline11"
@@ -119,35 +119,40 @@
 
     <ImageButton
         android:id="@+id/gps_butten"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="92dp"
+        android:layout_height="86dp"
         android:layout_marginStart="66dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="15dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#00FFFFFF"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline6"
-        app:srcCompat="@drawable/sm_5afb0cf8193f6" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gpsicons" />
 
     <ImageButton
         android:id="@+id/filters_butten"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
         android:layout_marginStart="65dp"
         android:layout_marginTop="47dp"
         android:layout_marginEnd="66dp"
         android:layout_marginBottom="15dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/guideline6"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/n4" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/iconfilter" />
 
 </android.support.constraint.ConstraintLayout>
