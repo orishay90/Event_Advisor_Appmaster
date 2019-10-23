@@ -87,7 +87,7 @@ public void setImageButtens(){
                     for (int i = 0; i <images.size() ; i++) {
                         try {
                             try {
-                                Thread.sleep(4000);
+                                Thread.sleep(3200);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
@@ -99,7 +99,7 @@ public void setImageButtens(){
 
                                 }
                             });
-                            Thread.sleep(4000);
+                            Thread.sleep(160);
 
 
 
@@ -124,11 +124,16 @@ public void setImageButtens(){
     private void addArrayListImages() {
         images=new ArrayList<>();
         images.add(getDrawable(R.drawable.adia));
+        images.add(getDrawable(R.drawable.ulam1));
         images.add(getDrawable(R.drawable.aatsula));
+        images.add(getDrawable(R.drawable.ulam5));
         images.add(getDrawable(R.drawable.oforia));
+        images.add(getDrawable(R.drawable.ulam3));
         images.add(getDrawable(R.drawable.nnn1));
-        images.add(getDrawable(R.drawable.doria_ulam));
-        images.add(getDrawable(R.drawable.amuzeon));
+        images.add(getDrawable(R.drawable.ulam4));
+       images.add(getDrawable(R.drawable.doria_ulam));
+        // );
+
 
     }
 }
