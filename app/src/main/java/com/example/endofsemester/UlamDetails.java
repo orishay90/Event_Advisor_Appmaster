@@ -44,6 +44,4 @@ public class UlamDetails extends AppCompatActivity {
         image.setImageResource(Integer.parseInt(""+ulam.getImage()));
 
     }
-
-
 }

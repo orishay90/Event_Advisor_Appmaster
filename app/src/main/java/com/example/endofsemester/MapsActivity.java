@@ -75,11 +75,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         // Add a marker in Sydney and move the camera
         LatLng israel = new LatLng(31.6095813,34.811959);
-        mMap.addMarker(new MarkerOptions().position(israel).title("Marker in Israel").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.marker_new)));
-
+        mMap.addMarker(new MarkerOptions().position(israel).title("משתמש").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.marker_new)));
        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(israel,11f));
 
+        LatLng ulam = new LatLng(31.592477,34.7649543);
+        mMap.addMarker(new MarkerOptions().position(ulam).title("גני ההצולה ").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.aatsulapng)));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ulam,11f));
 
+        LatLng ulam2 = new LatLng(31.5522246,34.7706958);
+        mMap.addMarker(new MarkerOptions().position(ulam2).title("אולם אירועים").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconhulam2)));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ulam2,11f));
+
+        LatLng ulam3 = new LatLng(31.5669098,34.7890968);
+        mMap.addMarker(new MarkerOptions().position(ulam3).title("אולם אירועים").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconhulam)));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ulam3,11f));
+
+        LatLng ulam4 = new LatLng(31.6565157,34.7766986);
+        mMap.addMarker(new MarkerOptions().position(ulam4).title("גני האחוזה").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.aahuzalogo)));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ulam4,11f));
+
+        LatLng ulam5 = new LatLng(31.6495127,34.7317078);
+        mMap.addMarker(new MarkerOptions().position(ulam5).title("גני הצבי").icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ganeyhatsvilogo)));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ulam5,11f));
     }
 
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
